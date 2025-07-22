@@ -1,0 +1,20 @@
+{
+  "name": "gemini-key-rotator-openai-compatible",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:example": "GEMINI_API_KEYS=\"key1,key2,key3\" node index.js",
+    "setup": "cp .env.example .env && echo 'Created .env file. Please edit it with your API keys.'",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A proxy server that rotates multiple Gemini API keys for OpenAI-compatible requests",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0"
+  }
+}
