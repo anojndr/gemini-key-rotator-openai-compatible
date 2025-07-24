@@ -120,6 +120,19 @@ main();
 ```
 The proxy will automatically rotate through the keys you provided for each request you make.
 
+**Example: Generating Embeddings**
+```javascript
+async function getEmbedding() {
+    const response = await openai.embeddings.create({
+        model: "gemini-embedding-001",
+        input: "Your text string goes here",
+    });
+    console.log(response.data[0].embedding);
+}
+
+getEmbedding();
+```
+
 ## Management Endpoints
 
 The proxy exposes a few endpoints for management and monitoring:

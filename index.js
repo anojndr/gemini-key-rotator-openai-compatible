@@ -91,7 +91,7 @@ app.use('/v1beta', async (req, res) => {
     targetUrl = `https://generativelanguage.googleapis.com${targetPath.split('?')[0]}`;
     
     const apiKey = getNextApiKey();
-    const isGcpPath = req.originalUrl.includes('/openai/');
+    const isGcpPath = req.originalUrl.includes('/openai/') || req.originalUrl.includes('/embeddings');
     
     const config = {
       method: req.method,
